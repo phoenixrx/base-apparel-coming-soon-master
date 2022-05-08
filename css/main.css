@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100vh;
+  display: block;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0, 36%, 70%);
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  align-content: center;
+}
+.logo {
+  margin-left: 1.3em;
+  margin-bottom: 1.3em;
+}
+main {
+  margin: 0 auto;
+  width: 100vw;
+  min-width: 300px;
+}
+article {
+  margin-top: 3em;
+}
+.imagen {
+  background-image: url("/images/hero-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 350px;
+}
+.saludo h1,
+.saludo h2 {
+  text-align: center;
+  margin: 0;
+}
+.saludo h1 {
+  margin-top: 2em;
+  font-size: 3em;
+  font-weight: 300;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+.saludo h2 {
+  font-size: 3em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+  color: hsl(0, 6%, 24%);
+}
+
+.saludo p {
+  margin-left: 3em;
+  margin-right: 3em;
+  text-align: center;
+  font-weight: 400;
+}
+#correo {
+  margin: 3em;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 1.5em;
+  border-radius: 30px 0 0 30px;
+  display: inline-block;
+  width: 80%;
+  border-width: 1px;
+  border-color: hsl(0, 93%, 68%);
+  color: hsl(0, 36%, 70%);
+  padding-left: 2em;
+  border-right: none;
+}
+.enviar .visi {
+  opacity: 1;
+}
+.enviar:active .visi {
+  opacity: 0;
+}
+#enviar {
+  position: relative;
+  top: -58px;
+  left: 80%;
+  padding: 1.65em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
+  border-radius: 30px;
+  border-style: none;
+  background-image: url("/images/icon-arrow.svg"),
+    linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  cursor: pointer;
+  background-repeat: no-repeat, repeat;
+  background-position: center;
+}
+.signo {
+  position: relative;
+  top: -99px;
+  left: 25%;
+  content: "";
+  margin: 0 auto;
+  width: 25px;
+  height: 25px;
+  z-index: 1;
+  background-image: url("/images/icon-error.svg");
+  background-size: cover;
+  opacity: 0;
+}
+.valido {
+  color: hsl(0, 93%, 68%);
+  position: relative;
+  top: -75px;
+  padding: 0 3em 0 4em;
+  font-size: 14px;
+  opacity: 0;
+}
+
+@media (min-width: 850px) {
+  html,
+  body {
+    display: grid;
+    background-color: hsl(0, 0%, 98%);
+    margin: 0 auto;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  main {
+    margin: 0 auto;
+    width: 100%;
+    background-image: url("/images/bg-pattern-desktop.svg");
+  }
+  article {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "logo image"
+      "texto image"
+      "formulario image";
+    width: 80vw;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
+  }
+  .logo {
+    grid-area: logo;
+    margin-left: 2.5em;
+    margin-bottom: 0em;
+    justify-self: left;
+  }
+  .saludo {
+    grid-area: texto;
+  }
+  .saludo h1 {
+    margin-top: 0.5em;
+  }
+  .saludo h1,
+  .saludo h2 {
+    letter-spacing: 0.2em;
+  }
+
+  .saludo h1,
+  .saludo h2,
+  .saludo p {
+    text-align: left;
+    margin-left: 5rem;
+  }
+  .imagen {
+    grid-area: image;
+    width: 100%;
+    height: 100%;
+    background-image: url("/images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+  }
+}

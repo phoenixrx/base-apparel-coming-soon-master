@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="/css/main.css" />
+    <script src="js/main.js" defer></script>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <article>
+        <div class="logo">
+          <img src="/images/logo.svg" alt="" class="logo" />
+        </div>
+        <div class="imagen"></div>
+        <div class="saludo">
+          <h1>We're</h1>
+          <h2>coming soon</h2>
+          <br />
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+        </div>
+
+        <div class="enviar">
+          <input type="email" name="correo" id="correo" value ""
+          placeholder="Email Address" />
+          <input
+            type="button"
+            value=" "
+            onclick="validarEmail(correo.value)"
+            id="enviar"
+          />
+          <div class="signo invi"></div>
+          <div class="valido invi">Please provide a valid Email</div>
+        </div>
+      </article>
+
+      <footer>
+        <p class="attribution">
+          Challenge by
+          <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+            >Frontend Mentor</a
+          >. Coded by
+          <a href="https://www.facebook.com/Phoenixrx" target="_blank"
+            >Jose Luna</a
+          >.
+        </p>
+      </footer>
+    </main>
+  </body>
+</html>
